@@ -259,3 +259,11 @@ h1, h2 {
 .btn-danger:hover, .btn-gray:hover, .btn-primary:hover {
   filter: brightness(0.95);
 }
+
+
+
+.error {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #c0392b;
+}
