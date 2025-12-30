@@ -111,3 +111,72 @@ h1, h2 {
  .filters button.active {
   background: #0f7f8d;
 }
+
+
+
+ /* list */
+#listContainer { margin-top: 8px; padding-bottom: 10px; }
+
+.no-tasks {
+  text-align: center;
+  color: #666;
+  margin: 14px 0;
+}
+
+/* each task row */
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 2px;
+}
+ .task-title { font-size: 14px; }
+
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+ .task-actions input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+ .icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 4px;
+}
+
+ .icon-btn:hover { transform: scale(1.05); }
+
+/* done style */
+.task-row.done .task-title {
+  text-decoration: line-through;
+  color: #c0392b;
+}
+
+/* bottom actions */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
