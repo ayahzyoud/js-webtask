@@ -192,7 +192,30 @@ h1, h2 {
 }
 
  #deleteDone { background: #d94848; }
- 
+
 #deleteAll  { background: #d94848; }
 
 #deleteDone:hover, #deleteAll:hover { filter: brightness(0.95); }
+
+
+
+
+/* MODALS */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hidden { display: none; }
+
+.modal-box {
+  background: #fff;
+  padding: 20px;
+  width: 360px;
+  border-radius: 6px;
+}
