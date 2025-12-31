@@ -249,3 +249,13 @@ h1, h2 {
   border-radius: 4px;
   font-size: 14px;
 }
+
+
+
+.btn-danger { background: #d94848; color: #fff; }
+.btn-gray   { background: #ccc; color: #111; }
+.btn-primary{ background: #1aa4b6; color: #fff; }
+
+.btn-danger:hover, .btn-gray:hover, .btn-primary:hover {
+  filter: brightness(0.95);
+}
