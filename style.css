@@ -96,3 +96,18 @@ h1, h2 {
   margin-top: 18px;
   margin-bottom: 16px;
 }
+
+ .filters button {
+  height: 42px;
+  border: none;
+  background: #1aa4b6;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+ .filters button:hover { filter: brightness(0.95); }
+ .filters button.active {
+  background: #0f7f8d;
+}
