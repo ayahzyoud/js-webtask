@@ -12,3 +12,12 @@ h1, h2 {
   margin: 24px 0 14px;
   font-weight: 700;
 }
+
+ /* containers */
+.todo-input,
+.filters,
+#listContainer,
+.actions {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
