@@ -180,3 +180,19 @@ h1, h2 {
   gap: 18px;
   margin-top: 14px;
 }
+
+
+ #deleteDone, #deleteAll {
+  height: 44px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+ #deleteDone { background: #d94848; }
+ 
+#deleteAll  { background: #d94848; }
+
+#deleteDone:hover, #deleteAll:hover { filter: brightness(0.95); }
