@@ -150,3 +150,33 @@ h1, h2 {
   height: 16px;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+ .icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 4px;
+}
+
+ .icon-btn:hover { transform: scale(1.05); }
+
+/* done style */
+.task-row.done .task-title {
+  text-decoration: line-through;
+  color: #c0392b;
+}
+
+/* bottom actions */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
