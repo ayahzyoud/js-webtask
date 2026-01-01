@@ -137,4 +137,24 @@ const listContainer = document.getElementById("listContainer");
       showError(msg);
       return;
     }
+ tasks.push({
+      id: Date.now(),
+      title: text.trim(),
+      done: false
+    });
 
+    saveTasks();
+    taskInput.value = "";
+    hideError();       //  م عشان ما تضل الرسالة ظاهر
+    renderTasks();
+  });
+
+  // Enter adds task
+  taskInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") addBtn.click();
+  });
+
+  // Delegation: edit/delete by click
+  listContainer.addEventListener("click", (e) => {
+    const row = e.target.closest(".task-row");
+    if (!row) return;
