@@ -225,3 +225,6 @@ const listContainer = document.getElementById("listContainer");
       alert(msg);
       return;
     }
+
+     const t = tasks.find(x => x.id === taskToEditId);
+    if (t) t.title = editInput.value.trim();
