@@ -16,3 +16,28 @@ const listContainer = document.getElementById("listContainer");
   const deleteModal = document.getElementById("deleteModal");
   const confirmDelete = document.getElementById("confirmDelete");
   const cancelDelete = document.getElementById("cancelDelete");
+  const deleteDoneModal = document.getElementById("deleteDoneModal");
+  const confirmDeleteDone = document.getElementById("confirmDeleteDone");
+  const cancelDeleteDone = document.getElementById("cancelDeleteDone");
+
+  const deleteAllModal = document.getElementById("deleteAllModal");
+  const confirmDeleteAll = document.getElementById("confirmDeleteAll");
+  const cancelDeleteAll = document.getElementById("cancelDeleteAll");
+
+  const editModal = document.getElementById("editModal");
+  const editInput = document.getElementById("editInput");
+  const saveEdit = document.getElementById("saveEdit");
+  const cancelEdit = document.getElementById("cancelEdit");
+
+
+
+
+
+
+
+
+
+
+
+
+
