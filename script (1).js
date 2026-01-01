@@ -107,6 +107,21 @@ const listContainer = document.getElementById("listContainer");
       const checked = task.done ? "checked" : "";
       const doneClass = task.done ? "done" : "";
 
+ return `
+        <div class="task-row ${doneClass}" data-id="${task.id}">
+          <span class="task-title">${escapeHtml(task.title)}</span>
+
+          <div class="task-actions">
+            <input class="done-checkbox" type="checkbox" ${checked} />
+            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+          </div>
+        </div>
+      `;
+    }).join("");
+  }
+
+  // ===== Events =====
 
 
 
