@@ -61,7 +61,22 @@ const listContainer = document.getElementById("listContainer");
     errorMsg.textContent = "";
   }
 
+ function openModal(modalEl) {
+    modalEl.classList.remove("hidden");
+  }
 
+  function closeModal(modalEl) {
+    modalEl.classList.add("hidden");
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
 
 
 
