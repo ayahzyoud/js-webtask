@@ -272,3 +272,9 @@ cancelDeleteDone.addEventListener("click", () => {
   deleteAllBtn.addEventListener("click", () => {
     openModal(deleteAllModal);
   });
+  confirmDeleteAll.addEventListener("click", () => {
+    tasks = [];
+    saveTasks();
+    renderTasks();
+    closeModal(deleteAllModal);
+  });
