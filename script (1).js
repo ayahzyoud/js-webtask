@@ -78,7 +78,21 @@ const listContainer = document.getElementById("listContainer");
       .replaceAll("'", "&#039;");
   }
 
+// 1) not empty
+  // 2) at least 5 characters
+  // 3) cannot start with a number
+  function validateTaskTitle(text) {
+    if (text.trim() === "") return "Task cannot be empty";
+    if (text.trim().length < 5) return "Task must be at least 5 characters";
+    if (/^\d/.test(text.trim())) return "Task cannot start with a number";
+    return null; // valid
+  }
 
+  function getFilteredTasks() {
+    if (currentFilter === "done") return tasks.filter(t => t.done);
+    if (currentFilter === "todo") return tasks.filter(t => !t.done);
+    return tasks;
+  }
 
 
 
