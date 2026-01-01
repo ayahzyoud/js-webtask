@@ -179,3 +179,18 @@ const listContainer = document.getElementById("listContainer");
   });
 
   // checkbox change
+
+  listContainer.addEventListener("change", (e) => {
+    const row = e.target.closest(".task-row");
+    if (!row) return;
+
+    const id = Number(row.dataset.id);
+    const task = tasks.find(t => t.id === id);
+    if (!task) return;
+
+    if (e.target.classList.contains("done-checkbox")) {
+      task.done = e.target.checked;
+      saveTasks();
+      renderTasks();
+    }
+  });
