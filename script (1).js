@@ -281,3 +281,8 @@ cancelDeleteDone.addEventListener("click", () => {
   cancelDeleteAll.addEventListener("click", () => {
     closeModal(deleteAllModal);
   });
+
+  //  First render 
+  hideError();   // ✅ عشان ما يطلع error من نفسه
+  renderTasks();
+});
