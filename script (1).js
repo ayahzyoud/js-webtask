@@ -217,3 +217,11 @@ const listContainer = document.getElementById("listContainer");
     setActiveFilter(filterTodo);
     renderTasks();
   });
+
+   // ===== Edit modal =====
+  saveEdit.addEventListener("click", () => {
+    const msg = validateTaskTitle(editInput.value);
+    if (msg) {
+      alert(msg);
+      return;
+    }
