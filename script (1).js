@@ -228,3 +228,9 @@ const listContainer = document.getElementById("listContainer");
 
      const t = tasks.find(x => x.id === taskToEditId);
     if (t) t.title = editInput.value.trim();
+
+    saveTasks();
+    renderTasks();
+    taskToEditId = null;
+    closeModal(editModal);
+  });
