@@ -94,6 +94,18 @@ const listContainer = document.getElementById("listContainer");
     return tasks;
   }
 
+// ===== Render =====
+  function renderTasks() {
+    const filtered = getFilteredTasks();
+
+    if (filtered.length === 0) {
+      listContainer.innerHTML = `<p class="no-tasks">No tasks.</p>`;
+      return;
+    }
+
+    listContainer.innerHTML = filtered.map(task => {
+      const checked = task.done ? "checked" : "";
+      const doneClass = task.done ? "done" : "";
 
 
 
