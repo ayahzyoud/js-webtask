@@ -28,7 +28,23 @@ const listContainer = document.getElementById("listContainer");
   const editInput = document.getElementById("editInput");
   const saveEdit = document.getElementById("saveEdit");
   const cancelEdit = document.getElementById("cancelEdit");
+// حالة التطبيق
+  const STORAGE_KEY = "todo_tasks_v1";
+  let tasks = loadTasks();
+  let currentFilter = "all"; // all | done | todo
 
+  let taskToDeleteId = null;
+  let taskToEditId = null;
+
+  // Helpers
+  function loadTasks() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  }
 
 
 
