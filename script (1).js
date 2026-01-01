@@ -194,3 +194,20 @@ const listContainer = document.getElementById("listContainer");
       renderTasks();
     }
   });
+// Filters + active class
+  function setActiveFilter(btn) {
+    [filterAll, filterDone, filterTodo].forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  }
+
+  filterAll.addEventListener("click", () => {
+    currentFilter = "all";
+    setActiveFilter(filterAll);
+    renderTasks();
+  });
+
+  filterDone.addEventListener("click", () => {
+    currentFilter = "done";
+    setActiveFilter(filterDone);
+    renderTasks();
+  });
