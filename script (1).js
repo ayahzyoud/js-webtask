@@ -122,7 +122,19 @@ const listContainer = document.getElementById("listContainer");
   }
 
   // ===== Events =====
+// اخفي الخطأ أول ما المستخدم يبلّش يكتب شي صح
+  taskInput.addEventListener("input", () => {
+    const msg = validateTaskTitle(taskInput.value);
+    if (msg === null) hideError();
+  });
 
+  // إضافة مهمة
+  addBtn.addEventListener("click", () => {
+    const text = taskInput.value;
 
-
+    const msg = validateTaskTitle(text);
+    if (msg) {
+      showError(msg);
+      return;
+    }
 
