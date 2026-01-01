@@ -211,3 +211,9 @@ const listContainer = document.getElementById("listContainer");
     setActiveFilter(filterDone);
     renderTasks();
   });
+
+  filterTodo.addEventListener("click", () => {
+    currentFilter = "todo";
+    setActiveFilter(filterTodo);
+    renderTasks();
+  });
