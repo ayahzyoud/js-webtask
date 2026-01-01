@@ -47,6 +47,19 @@ const listContainer = document.getElementById("listContainer");
   }
 
 
+  function saveTasks() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+  }
+
+  function showError(msg) {
+    errorMsg.textContent = msg;
+    errorMsg.classList.remove("hidden");
+  }
+
+  function hideError() {
+    errorMsg.classList.add("hidden");
+    errorMsg.textContent = "";
+  }
 
 
 
