@@ -249,3 +249,12 @@ const listContainer = document.getElementById("listContainer");
     taskToDeleteId = null;
     closeModal(deleteModal);
   });
+cancelDelete.addEventListener("click", () => {
+    taskToDeleteId = null;
+    closeModal(deleteModal);
+  });
+
+  // ===== Delete done modal =====
+  deleteDoneBtn.addEventListener("click", () => {
+    openModal(deleteDoneModal);
+  });
