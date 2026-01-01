@@ -278,3 +278,6 @@ cancelDeleteDone.addEventListener("click", () => {
     renderTasks();
     closeModal(deleteAllModal);
   });
+  cancelDeleteAll.addEventListener("click", () => {
+    closeModal(deleteAllModal);
+  });
