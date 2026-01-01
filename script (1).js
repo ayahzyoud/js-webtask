@@ -264,3 +264,11 @@ cancelDelete.addEventListener("click", () => {
     renderTasks();
     closeModal(deleteDoneModal);
   });
+cancelDeleteDone.addEventListener("click", () => {
+    closeModal(deleteDoneModal);
+  });
+
+  // Delete all modal
+  deleteAllBtn.addEventListener("click", () => {
+    openModal(deleteAllModal);
+  });
