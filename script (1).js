@@ -158,3 +158,24 @@ const listContainer = document.getElementById("listContainer");
   listContainer.addEventListener("click", (e) => {
     const row = e.target.closest(".task-row");
     if (!row) return;
+ const id = Number(row.dataset.id);
+    const task = tasks.find(t => t.id === id);
+    if (!task) return;
+
+    // Delete one
+    if (e.target.classList.contains("delete-btn")) {
+      taskToDeleteId = id;
+      openModal(deleteModal);
+      return;
+    }
+
+    // Edit
+    if (e.target.classList.contains("edit-btn")) {
+      taskToEditId = id;
+      editInput.value = task.title;
+      openModal(editModal);
+      return;
+    }
+  });
+
+  // checkbox change
