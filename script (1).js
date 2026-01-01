@@ -241,3 +241,11 @@ const listContainer = document.getElementById("listContainer");
   });
 
   // ===== Delete one modal =====
+
+   confirmDelete.addEventListener("click", () => {
+    tasks = tasks.filter(t => t.id !== taskToDeleteId);
+    saveTasks();
+    renderTasks();
+    taskToDeleteId = null;
+    closeModal(deleteModal);
+  });
