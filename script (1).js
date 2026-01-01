@@ -234,3 +234,10 @@ const listContainer = document.getElementById("listContainer");
     taskToEditId = null;
     closeModal(editModal);
   });
+
+  cancelEdit.addEventListener("click", () => {
+    taskToEditId = null;
+    closeModal(editModal);
+  });
+
+  // ===== Delete one modal =====
