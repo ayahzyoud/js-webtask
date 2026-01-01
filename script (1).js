@@ -258,3 +258,9 @@ cancelDelete.addEventListener("click", () => {
   deleteDoneBtn.addEventListener("click", () => {
     openModal(deleteDoneModal);
   });
+  confirmDeleteDone.addEventListener("click", () => {
+    tasks = tasks.filter(t => !t.done);
+    saveTasks();
+    renderTasks();
+    closeModal(deleteDoneModal);
+  });
